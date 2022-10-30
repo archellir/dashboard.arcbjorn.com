@@ -2,7 +2,8 @@ name: Generate a build and push to main branch
 
 on:
   push:
-    - master
+    branches:
+      - master
 
 jobs:
   build:
