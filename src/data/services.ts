@@ -47,7 +47,7 @@ export const internalServices: IServiceItem[] = [
   },
   {
     name: "Company website",
-    description: "SvelteKit, TS",
+    description: "built with SvelteKit, TS",
     url: "/",
     monitorId: 10,
   },
