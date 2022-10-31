@@ -20,6 +20,12 @@ export const externalServices: IServiceItem[] = [
     monitorId: 3,
   },
   {
+    name: "Git server",
+    description: "built on Gitea",
+    url: "https://git.arcbjorn.com/explore/repos",
+    monitorId: 4,
+  },
+  {
     name: "This dashboard",
     description: "Built with Astro, Preact, TS",
     url: "/",
@@ -62,12 +68,6 @@ export const internalServices: IServiceItem[] = [
     description: "built on Portainer",
     url: "https://www.portainer.io/",
     monitorId: 5,
-  },
-  {
-    name: "Git server",
-    description: "built on Gitea",
-    url: "https://gitea.io/",
-    monitorId: 4,
   },
   {
     name: "Server web interface",
