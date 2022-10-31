@@ -7,7 +7,7 @@ export const Main: FunctionalComponent = () => {
   return (
     <>
       <div class="self-center text-center p-8 max-w-screen-lg text-sm sm:text-base lg:border-x border-t border-dashed border-gray-400">
-        Building and learning brings me a lot of joy, therefore I maintain an
+        Building and learning brings me a lot of joy, therefore I maintain a
         suite of apps, developing new ones and experimenting with system
         architecture from time to time.
       </div>
