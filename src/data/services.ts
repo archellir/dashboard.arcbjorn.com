@@ -9,7 +9,7 @@ export const externalServices: IServiceItem[] = [
   },
   {
     name: "Personal website",
-    description: "Build with Gatsby.js, GraphQL, TS",
+    description: "Build with SolidJS, TailwindCSS, TS",
     url: "https://arcbjorn.com",
     monitorId: 8,
   },
