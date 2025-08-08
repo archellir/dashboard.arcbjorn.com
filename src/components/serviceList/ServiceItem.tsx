@@ -3,21 +3,21 @@ import type { IServiceItem } from "../../data/types";
 
 export const ServiceListItem: FunctionalComponent<IServiceItem> = (props) => {
   return (
-    <li class="border-t border-gray-400 py-4 px-2 list-none hover:border-transparent">
+    <li class="border-t border-gray-400 py-4 px-0 sm:px-2 list-none hover:border-transparent">
       <a
         href={props.url}
         target="_blank"
         rel="noopener noreferrer"
-        class="p-2 flex flex-col justify-start items-center gap-y-2 gap-x-4 group cursor-pointer"
+        class="p-1 sm:p-2 flex flex-col justify-start items-center gap-y-2 gap-x-4 group cursor-pointer"
       >
         <div>
-          <h2 class="text-lg sm:text-xl tracking-tight font-plex-mono font-semibold group-hover:underline">
+          <h2 class="text-base sm:text-lg lg:text-xl tracking-tight font-plex-mono font-semibold group-hover:underline text-center">
             {props.name}
           </h2>
-          <p class="pt-1 font-plex-sans text-grey-600">{props.description}</p>
+          <p class="pt-1 font-plex-sans text-grey-600 text-sm sm:text-base text-center">{props.description}</p>
         </div>
         {props.monitorId && (
-          <div class="flex justify-between items-center gap-2 w-full pt-2">
+          <div class="flex flex-col justify-center items-center gap-2 w-full pt-2">
             <img
               width="60"
               src={`https://uptime.arcbjorn.com/api/badge/${props.monitorId}/status?upLabel=Online&downLabel=Offline&style=for-the-badge&logo=appveyor`}

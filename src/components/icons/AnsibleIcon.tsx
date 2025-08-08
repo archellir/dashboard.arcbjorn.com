@@ -5,8 +5,8 @@ export const AnsibleIcon: FunctionalComponent = () => {
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="48"
+      height="48"
       viewBox="0 0 200.000000 200.000000"
       preserveAspectRatio="xMidYMid meet"
     >

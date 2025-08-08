@@ -8,12 +8,12 @@ export const StackList: FunctionalComponent = () => {
   return (
     <ul
       role="list"
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12"
+      class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12"
     >
       {stackItems.map(({ name, icon }) => (
         <StackListItem name={name} icon={icon} />
       ))}
-      <li class="flex justify-center items-center gap-2 sm:col-span-2 lg:col-span-1">
+      <li class="flex justify-center items-center gap-2 col-span-2 sm:col-span-2 lg:col-span-1">
         <div class="flex flex-col items-center">
           <div class="pb-2">Server:</div>
           <div class="flex justify-center items-center gap-4">

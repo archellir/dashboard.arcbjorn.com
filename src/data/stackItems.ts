@@ -21,7 +21,7 @@ export const stackItems = [
     icon: LockIcon,
   },
   {
-    name: "Docker & Docker Compose",
+    name: "Docker",
     icon: DockerIcon,
   },
   {

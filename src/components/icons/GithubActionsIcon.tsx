@@ -5,8 +5,8 @@ export const GithubActionsIcon: FunctionalComponent = () => {
     <svg
       role="img"
       viewBox="0 0 24 24"
-      height="32"
-      width="32"
+      height="48"
+      width="48"
       fill="#fff"
       xmlns="http://www.w3.org/2000/svg"
     >
