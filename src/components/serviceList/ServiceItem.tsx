@@ -17,7 +17,7 @@ export const ServiceListItem: FunctionalComponent<IServiceItem> = (props) => {
           <p class="pt-1 font-plex-sans text-grey-600 text-sm sm:text-base text-center">{props.description}</p>
         </div>
         {props.monitorId && (
-          <div class="flex flex-col justify-center items-center gap-2 w-full pt-2">
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-2 w-full pt-2">
             <img
               width="60"
               src={`https://uptime.arcbjorn.com/api/badge/${props.monitorId}/status?upLabel=Online&downLabel=Offline&style=for-the-badge&logo=appveyor`}
