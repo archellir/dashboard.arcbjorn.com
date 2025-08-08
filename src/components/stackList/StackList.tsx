@@ -13,15 +13,17 @@ export const StackList: FunctionalComponent = () => {
       {stackItems.map(({ name, icon }) => (
         <StackListItem name={name} icon={icon} />
       ))}
-      <li class="flex-col items-center justify-center">
-        <div class="pb-2">Server:</div>
-        <div class="flex justify-around items-center gap-2">
-          <div class="flex items-center gap-2">
-            <CPUIcon />4 CPU
-          </div>
-          <div class="flex items-center gap-2">
-            <RAMIcon />
-            16.4 GB RAM
+      <li class="flex justify-center items-center gap-2 sm:col-span-2 lg:col-span-1">
+        <div class="flex flex-col items-center">
+          <div class="pb-2">Server:</div>
+          <div class="flex justify-center items-center gap-4">
+            <div class="flex items-center gap-2">
+              <CPUIcon />4 CPU
+            </div>
+            <div class="flex items-center gap-2">
+              <RAMIcon />
+              16.4 GB RAM
+            </div>
           </div>
         </div>
       </li>

@@ -5,6 +5,7 @@ import { GithubActionsIcon } from "../components/icons/GithubActionsIcon";
 import { LockIcon } from "../components/icons/LockIcon";
 import { DenoIcon } from "../components/icons/DenoIcon";
 import { CloudflareIcon } from "../components/icons/CloudflareIcon";
+import { KubernetesIcon } from "../components/icons/KubernetesIcon";
 
 export const stackItems = [
   {
@@ -34,5 +35,9 @@ export const stackItems = [
   {
     name: "Deno Deploy",
     icon: DenoIcon,
+  },
+  {
+    name: "Kubernetes",
+    icon: KubernetesIcon,
   },
 ];
