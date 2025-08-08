@@ -16,7 +16,7 @@ export const ServiceListItem: FunctionalComponent<IServiceItem> = (props) => {
           </h2>
           <p class="pt-1 font-plex-sans text-grey-600">{props.description}</p>
         </div>
-        {/* {props.monitorId && (
+        {props.monitorId && (
           <div class="flex justify-between items-center gap-2 w-full pt-2">
             <img
               width="60"
@@ -27,7 +27,7 @@ export const ServiceListItem: FunctionalComponent<IServiceItem> = (props) => {
               src={`https://uptime.arcbjorn.com/api/badge/${props.monitorId}/uptime?label=24&labelSuffix=hours&style=for-the-badge&logo=appveyor`}
             />
           </div>
-        )} */}
+        )}
       </a>
     </li>
   );

@@ -1,78 +1,82 @@
 import type { IServiceItem } from "./types";
 
-export const externalServices: IServiceItem[] = [
-  {
-    name: "Blog",
-    description: "Built with Deno, Fresh, Preact, TS",
-    url: "https://blog.arcbjorn.com",
-    monitorId: 2,
-  },
+export const personal: IServiceItem[] = [
   {
     name: "Personal website",
-    description: "Build with SolidJS, TailwindCSS, TS",
+    description: "SolidJS, TailwindCSS, TS",
     url: "https://arcbjorn.com",
-    monitorId: 8,
+    monitorId: 9,
   },
   {
-    name: "Tax calculator",
-    description: "Build with Vue 3, Pinia, TS",
-    url: "https://tax.arcbjorn.com",
-    monitorId: 3,
-  },
-  {
-    name: "Git server",
-    description: "built on Gitea",
-    url: "https://git.arcbjorn.com/explore/repos",
-    monitorId: 4,
+    name: "Blog",
+    description: "Deno, Fresh, Preact, TS",
+    url: "https://blog.arcbjorn.com",
+    monitorId: 11,
   },
   {
     name: "This dashboard",
-    description: "Built with Astro, Preact, TS",
+    description: "Astro, Preact, TS",
     url: "/",
-    monitorId: 9,
+    monitorId: 4,
+  },
+];
+
+export const tools: IServiceItem[] = [
+  {
+    name: "Tax calculator",
+    description: "Vue 3, Pinia, TS, TailwindCSS",
+    url: "https://tax.arcbjorn.com",
+    monitorId: 10,
+  },
+  {
+    name: "Git platform",
+    description: "built on Gitea",
+    url: "https://git.arcbjorn.com/explore/repos",
+    monitorId: 5,
   },
   {
     name: "Web monitoring",
     description: "built on Uptime-kuma",
     url: "https://uptime.arcbjorn.com/status",
   },
-];
-
-export const internalServices: IServiceItem[] = [
-  {
-    name: "Service Logger",
-    description: "built on Dozzle",
-    url: "https://dozzle.dev/",
-    monitorId: 11,
-  },
-  {
-    name: "Company website",
-    description: "built with SvelteKit, TS",
-    url: "/",
-    monitorId: 10,
-  },
   {
     name: "Analytics dashboard",
     description: "built on Umami",
     url: "https://umami.is/",
-    monitorId: 7,
-  },
-  {
-    name: "Database interface",
-    description: "built on pgAdmin",
-    url: "https://www.pgadmin.org/",
     monitorId: 6,
   },
   {
-    name: "Server infrastructure",
-    description: "built on Portainer",
-    url: "https://www.portainer.io/",
-    monitorId: 5,
+    name: "Notes storage",
+    description: "built on Memos",
+    url: "https://www.usememos.com/",
+    monitorId: 7,
   },
   {
     name: "Server web interface",
     description: "built on FileBrowser",
     url: "https://filebrowser.org/",
+    monitorId: 8,
+  },
+];
+
+export const products: IServiceItem[] = [
+  {
+    name: "ArkyDev",
+    description: "SvelteKit, TS, TailwindCSS",
+    url: "https://arkydev.com/",
+    monitorId: 10,
+  },
+  {
+    name: "Argentinaa music",
+    description: "SvelteKit, TS, TailwindCSS",
+    url: "http://argentinamusic.space/",
+    monitorId: 3,
+  },
+
+  {
+    name: "Humans Connect AI",
+    description: "SvelteKit, TS, TailwindCSS",
+    url: "https://humansconnect.ai/",
     monitorId: 1,
   },
 ];

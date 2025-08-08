@@ -1,5 +1,5 @@
 import type { FunctionalComponent } from "preact";
-import { externalServices, internalServices } from "../data/services";
+import { personal, tools, products } from "../data/services";
 import { ServiceList } from "./serviceList/ServiceList";
 import { StackList } from "./stackList/StackList";
 
@@ -12,16 +12,21 @@ export const Main: FunctionalComponent = () => {
         architecture from time to time.
       </div>
 
-      {/* External Services */}
+      {/* Personal */}
       <div class="self-center text-center p-8 max-w-screen-xl text-sm sm:text-base border-t border-dashed border-gray-400">
-        <div class="pb-8 text-lg font-semibold">Public services:</div>
-        <ServiceList services={externalServices} />
+        <ServiceList services={personal} />
       </div>
 
-      {/* Internal Services */}
+      {/* Tools */}
       <div class="self-center text-center p-8 max-w-screen-xl text-sm sm:text-base border-t border-dashed border-gray-400">
-        <div class="pb-8 text-lg font-semibold">Internal services:</div>
-        <ServiceList services={internalServices} />
+        <div class="pb-8 text-lg font-semibold">Tools:</div>
+        <ServiceList services={tools} />
+      </div>
+
+      {/* Products & Services */}
+      <div class="self-center text-center p-8 max-w-screen-xl text-sm sm:text-base border-t border-dashed border-gray-400">
+        <div class="pb-8 text-lg font-semibold">Products & Services:</div>
+        <ServiceList services={products} />
       </div>
 
       {/* DevOps stack */}
