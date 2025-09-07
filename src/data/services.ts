@@ -59,7 +59,7 @@ export const tools: IServiceItem[] = [
   },
 ];
 
-export const products: IServiceItem[] = [
+export const projects: IServiceItem[] = [
   {
     name: "ArkyDev",
     description: "SvelteKit, TS, TailwindCSS",

@@ -1,5 +1,5 @@
 import type { FunctionalComponent } from "preact";
-import { personal, tools, products } from "../data/services";
+import { personal, tools, projects } from "../data/services";
 import { ServiceList } from "./serviceList/ServiceList";
 import { StackList } from "./stackList/StackList";
 
@@ -25,8 +25,8 @@ export const Main: FunctionalComponent = () => {
 
       {/* Products & Services */}
       <div class="self-center text-center px-2 py-6 sm:px-4 sm:py-8 max-w-screen-xl text-sm sm:text-base border-t border-dashed border-gray-400">
-        <div class="pb-8 text-lg font-semibold">Products & Services:</div>
-        <ServiceList services={products} />
+        <div class="pb-8 text-lg font-semibold">Projects:</div>
+        <ServiceList services={projects} />
       </div>
 
       {/* DevOps stack */}
