@@ -1,4 +1,4 @@
-import type { IServiceItem } from "./types";
+import type { IServiceItem } from "@data/types";
 
 export const personal: IServiceItem[] = [
   {

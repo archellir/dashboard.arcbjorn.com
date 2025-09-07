@@ -1,11 +1,11 @@
-import { AnsibleIcon } from "../components/icons/AnsibleIcon";
-import { DockerIcon } from "../components/icons/DockerIcon";
-import { PortainerIcon } from "../components/icons/PortainerIcon";
-import { GithubActionsIcon } from "../components/icons/GithubActionsIcon";
-import { LockIcon } from "../components/icons/LockIcon";
-import { DenoIcon } from "../components/icons/DenoIcon";
-import { CloudflareIcon } from "../components/icons/CloudflareIcon";
-import { KubernetesIcon } from "../components/icons/KubernetesIcon";
+import { AnsibleIcon } from "@icons/AnsibleIcon";
+import { DockerIcon } from "@icons/DockerIcon";
+import { PortainerIcon } from "@icons/PortainerIcon";
+import { GithubActionsIcon } from "@icons/GithubActionsIcon";
+import { LockIcon } from "@icons/LockIcon";
+import { DenoIcon } from "@icons/DenoIcon";
+import { CloudflareIcon } from "@icons/CloudflareIcon";
+import { KubernetesIcon } from "@icons/KubernetesIcon";
 
 export const stackItems = [
   {

@@ -1,5 +1,5 @@
 import type { FunctionalComponent } from "preact";
-import type { IServiceItem } from "../../data/types";
+import type { IServiceItem } from "@data/types";
 
 export const ServiceListItem: FunctionalComponent<IServiceItem> = (props) => {
   return (

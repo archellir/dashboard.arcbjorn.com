@@ -1,6 +1,6 @@
 import type { FunctionalComponent } from "preact";
-import type { IServiceItem } from "../../data/types";
-import { ServiceListItem } from "./ServiceItem";
+import type { IServiceItem } from "@data/types";
+import { ServiceListItem } from "@components/serviceList/ServiceItem";
 
 interface IServiceListProps {
   services: IServiceItem[];

@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import { fileURLToPath, URL } from "node:url";
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
@@ -16,4 +17,16 @@ export default defineConfig({
     }),
     preact(),
   ],
+  vite: {
+    resolve: {
+      alias: {
+        "@": fileURLToPath(new URL("./src", import.meta.url)),
+        "@components": fileURLToPath(new URL("./src/components", import.meta.url)),
+        "@data": fileURLToPath(new URL("./src/data", import.meta.url)),
+        "@icons": fileURLToPath(new URL("./src/components/icons", import.meta.url)),
+        "@layouts": fileURLToPath(new URL("./src/layouts", import.meta.url)),
+        "@pages": fileURLToPath(new URL("./src/pages", import.meta.url)),
+      },
+    },
+  },
 });

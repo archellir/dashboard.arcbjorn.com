@@ -1,7 +1,7 @@
 import type { FunctionalComponent } from "preact";
-import { personal, tools, projects } from "../data/services";
-import { ServiceList } from "./serviceList/ServiceList";
-import { StackList } from "./stackList/StackList";
+import { personal, tools, projects } from "@data/services";
+import { ServiceList } from "@components/serviceList/ServiceList";
+import { StackList } from "@components/stackList/StackList";
 
 export const Main: FunctionalComponent = () => {
   return (

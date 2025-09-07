@@ -1,8 +1,8 @@
 import type { FunctionalComponent } from "preact";
-import { stackItems } from "../../data/stackItems";
-import { CPUIcon } from "../icons/CPUIcon";
-import { RAMIcon } from "../icons/RAMIcon";
-import { StackListItem } from "./StackItem";
+import { stackItems } from "@data/stackItems";
+import { CPUIcon } from "@icons/CPUIcon";
+import { RAMIcon } from "@icons/RAMIcon";
+import { StackListItem } from "@components/stackList/StackItem";
 
 export const StackList: FunctionalComponent = () => {
   return (
