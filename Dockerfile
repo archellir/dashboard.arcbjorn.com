@@ -1,39 +1,77 @@
-# Build stage
-FROM node:18-alpine AS builder
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files
-COPY package*.json pnpm-lock.yaml ./
+RUN npm install -g pnpm@latest
 
-# Install pnpm and dependencies
-RUN npm install -g pnpm && \
-    pnpm install --force
+COPY package.json pnpm-lock.yaml ./
 
-# Copy source code
+RUN pnpm install --frozen-lockfile --prefer-offline
+
 COPY . .
 
-# Build the application
+ENV NODE_ENV=production
 RUN pnpm build
 
-# Production stage
-FROM nginx:alpine
+FROM nginx:alpine-slim
 
-# Copy built files
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html 2>/dev/null || \
+     COPY --from=builder /app/build /usr/share/nginx/html 2>/dev/null || \
+     COPY --from=builder /app/out /usr/share/nginx/html 2>/dev/null || \
+     echo "Build output not found in dist/, build/, or out/"
 
-# Copy nginx config for SPA routing
 RUN echo 'server { \
     listen 80; \
+    server_name _; \
     root /usr/share/nginx/html; \
     index index.html; \
+    \
+    sendfile on; \
+    tcp_nopush on; \
+    tcp_nodelay on; \
+    keepalive_timeout 65; \
+    types_hash_max_size 2048; \
+    server_tokens off; \
+    \
+    gzip on; \
+    gzip_vary on; \
+    gzip_comp_level 6; \
+    gzip_min_length 256; \
+    gzip_proxied any; \
+    gzip_types \
+        text/plain \
+        text/css \
+        text/xml \
+        text/javascript \
+        application/json \
+        application/javascript \
+        application/xml+rss \
+        application/rss+xml \
+        application/atom+xml \
+        application/xhtml+xml \
+        application/x-font-ttf \
+        application/x-font-opentype \
+        application/vnd.ms-fontobject \
+        image/svg+xml \
+        image/x-icon; \
+    \
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|otf)$ { \
+        expires 1y; \
+        add_header Cache-Control "public, immutable"; \
+        access_log off; \
+    } \
+    \
+    location ~* \.(html)$ { \
+        expires 1h; \
+        add_header Cache-Control "public, must-revalidate"; \
+    } \
+    \
     location / { \
         try_files $uri $uri/ /index.html; \
+        add_header X-Frame-Options "SAMEORIGIN" always; \
+        add_header X-Content-Type-Options "nosniff" always; \
+        add_header X-XSS-Protection "1; mode=block" always; \
     } \
-    gzip on; \
-    gzip_types text/css application/javascript application/json image/svg+xml; \
-    expires 1y; \
-    add_header Cache-Control "public, immutable"; \
 }' > /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
